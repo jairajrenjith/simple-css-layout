@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Layout & CSS Functions Demo</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Layout & Design Lab 🧪</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#flex">Flex</a></li>
+                    <li><a href="#grid">Grid</a></li>
+                    <li><a href="#float-demo">Float</a></li>
+                    <li><a href="#variables" class="cta-button">CSS Variables</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <main>
+            <section id="flex" class="card primary-section">
+                <h2>1. Mastering Flexbox (Alignment & Distribution)</h2>
+                <p>Flexbox is indispensable for one-dimensional layouts, ensuring perfect alignment and space distribution within small containers like navigation menus, forms, and cards.</p>
+                
+                <div class="flex-example-box">
+                    <div class="flex-item">Element A</div>
+                    <div class="flex-item">Element B</div>
+                    <div class="flex-item">Element C</div>
+                    <div class="flex-item">Element D</div>
+                </div>
+                
+                <p>The items above use <code>justify-content: space-between;</code> and <code>align-items: center;</code> demonstrating simple, powerful control over space.</p>
+            </section>
+            
+            <section id="float-demo" class="card">
+                <h2>2. The Classic Float Technique (Three-Box Layout)</h2>
+                <p>Before Flexbox and Grid, **Floating** was the primary way to achieve multi-column layouts. It moves the box to the side, allowing subsequent content to wrap around it. We use the **clearfix** pattern to contain the floated elements.</p>
+                
+                <div class="float-container clearfix">
+                    <div class="float-box float-left-box">
+                        <h3>Float Box 1</h3>
+                        <p>This box is styled with <code>float: left;</code>. Its width is set to 33.33%.</p>
+                    </div>
+                    <div class="float-box float-left-box">
+                        <h3>Float Box 2</h3>
+                        <p>This box also floats left and sits next to Box 1. It shares the same percentage width.</p>
+                    </div>
+                    <div class="float-box float-left-box">
+                        <h3>Float Box 3</h3>
+                        <p>The third box completes the row. The parent container uses a **clearfix** to maintain integrity.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="grid" class="card">
+                <h2>3. Implementing Advanced CSS Grid (Complex Layout)</h2>
+                <p>This section uses a more complex Grid structure to showcase two-dimensional control over rows and columns simultaneously. Notice the asymmetrical sizing and gaps.</p>
+                
+                <div class="complex-grid-layout">
+                    <div class="grid-feature feature-a">
+                        <h3>Grid Area A: Header</h3>
+                        <p>Spans two columns and uses <code>grid-column: 1 / span 2;</code>.</p>
+                    </div>
+                    <div class="grid-feature feature-b">
+                        <h3>Grid Area B: Content</h3>
+                        <p>Takes up a single cell, demonstrating simple cell placement.</p>
+                    </div>
+                    <div class="grid-feature feature-c">
+                        <h3>Grid Area C: Footer</h3>
+                        <p>Also takes a single cell, completing the 2x2 grid structure.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="variables" class="card scroll-filler">
+                <h2>4. CSS Variables & Transitions</h2>
+                <p>This large block demonstrates the use of **CSS Custom Properties** (Variables) for theme consistency and **CSS Transitions** for smooth visual feedback on hover.</p>
+                
+                <div class="transition-demo-box">
+                    Hover over me!
+                </div>
+                
+                <div style="height: 650px; background: var(--bg-light); border: 1px dashed var(--color-accent); margin-top: 20px; display: flex; align-items: center; justify-content: center;">
+                    Content to force scrolling down.
+                </div>
+            </section>
+        </main>
+
+        <aside>
+            <div class="widget sticky-widget">
+                <h3>Layout Tools 🛠️</h3>
+                <p>This is the element styled with **`position: sticky;`**. It sticks to <code>top: 30px;</code> as you scroll the main content.</p>
+                <a href="#variables" class="cta-button">Check Transitions</a>
+            </div>
+            
+            <div class="widget">
+                <h3>CSS Techniques Used</h3>
+                <ul>
+                    <li>**Box Model:** `box-sizing: border-box`</li>
+                    <li>**Flexbox:** `justify-content`, `align-items`</li>
+                    <li>**Grid:** `grid-template-columns`, `grid-gap`</li>
+                    <li>**Float:** `float: left`, **Clearfix**</li>
+                    <li>**Positioning:** `position: sticky`</li>
+                    <li>**Functions:** `var()`, `calc()` (implicitly used by `fr` units)</li>
+                    <li>**Transitions:** `transition: all 0.3s`</li>
+                    <li>**Media Queries:** Responsiveness</li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>Layout Demo Footer | Built with organized and aesthetic CSS.</p>
+    </footer>
+</body>
+</html>
